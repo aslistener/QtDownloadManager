@@ -1,4 +1,4 @@
-#include "downloadwidget.h"
+﻿#include "downloadwidget.h"
 #include "ui_form.h"
 #include <QProgressBar>
 #include <QPushButton>
@@ -21,8 +21,9 @@ DownloadWidget::DownloadWidget(QWidget *parent) :
 // http://ftp.yz.yamagata-u.ac.jp/pub/qtproject/official_releases/qt/5.2/5.2.0/qt-windows-opensource-5.2.0-msvc2012-x86-offline.exe
 // http://hivelocity.dl.sourceforge.net/project/tortoisesvn/1.8.4/Application/TortoiseSVN-1.8.4.24972-x64-svn-1.8.5.msi
 
-//    ui->urlEdit->setText("http://hivelocity.dl.sourceforge.net/project/tortoisesvn/1.8.4/Application/TortoiseSVN-1.8.4.24972-x64-svn-1.8.5.msi");
-    ui->urlEdit->setText("ftp://software.simrad-yachting.com/NSS/NSS-3.0-46.1.66-25591-r1-Standard-1.upd");
+//    ui->urlEdit->setText("ftp://ftp.gnu.org/gnu/gzip/gzip-1.3.12.tar");
+
+    ui->urlEdit->setText("http://sw.bos.baidu.com/sw-search-sp/software/cc9b2e050d0bf/BaiduNetdisk_5.7.1.1.exe");
 
     QStandardItemModel *model = new QStandardItemModel(0, 1, this);
     ui->listView->setModel(model);

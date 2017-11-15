@@ -1,4 +1,4 @@
-#include "downloadmanagerHTTP.h"
+﻿#include "downloadmanagerHTTP.h"
 #include "downloadwidget.h"
 
 #include <QFileInfo>
@@ -85,6 +85,13 @@ void DownloadManagerHTTP::resume()
 }
 
 
+/*
+    http 断点续传关键：
+        1. 文件服务器支持 Accept-Ranges
+        2. 正确计算当前已经下载的字节，并把它保存到一个临时文件中，文件以Append的方式打开
+        3. 发送给服务器的请求，有一个 Range: bytes=1-100 形式的header
+        4. 其它和一般的下载相同。
+*/
 void DownloadManagerHTTP::download()
 {
     qDebug() << "download()";
